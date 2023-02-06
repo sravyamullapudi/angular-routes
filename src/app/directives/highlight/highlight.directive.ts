@@ -1,10 +1,27 @@
-import { Directive, ElementRef } from '@angular/core';
+import { parseHostBindings } from '@angular/compiler';
+import { Directive, ElementRef, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appHighlight]'
+  selector: '[highLight]'
 })
 export class HighlightDirective {
 
-  constructor(el: ElementRef) { }
+  @Input() color: any;
 
+  constructor(private element: ElementRef) { }
+
+  @HostBinding('style.color') color2!: string;
+  // @HostBinding('class') class: string = 'highlight';
+  //using getter method
+  // @HostBinding('class') get class() { return 'highlight'};
+  @HostBinding('class.highlight') get hasHighlight () { return true; } 
+
+  @HostListener('mouseover') onMouseOver() {
+    this.element.nativeElement.style.color = this.color;
+  }
+
+  @HostListener('mouseleave') onMouseLeave() {
+    // this.element.nativeElement.style.color = '';
+    this.color2 = ''
+  }
 }

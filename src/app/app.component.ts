@@ -21,5 +21,9 @@ export class AppComponent {
       name: 'Contact',
       path: 'contact'
     },
+    {
+      name: 'Heros',
+      path: 'heros'
+    }
   ]
 }

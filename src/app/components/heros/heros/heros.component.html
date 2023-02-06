@@ -1,0 +1,23 @@
+<table>
+    <thead highLight>
+        <th>Id</th>
+        <th>Name</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Even</th>
+        <th>Odd</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let hero of heros; let i=index; let first=first; let last= last;let even= even; let odd=odd" highLight color="red">
+            <td>{{i}}</td>
+            <td>
+                <input type="text" value={{heros[i]}}/>
+            </td>
+            <td>{{first}}</td>
+            <td>{{last}}</td>
+            <td>{{even}}</td>
+            <td>{{odd}}</td>
+        </tr>
+    </tbody>
+</table>
+<button type="submit" (click)="onAdd()" autofocus highLight>Add</button>
