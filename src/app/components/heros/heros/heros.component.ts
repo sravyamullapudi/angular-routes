@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HerosComponent implements OnInit {
   heros: any[] = [ 'Superman', 'Batman', 'BatGirl', 'Robin', 'Flash'];
+  showText!: boolean;
 
   constructor() { }
 
@@ -17,4 +18,7 @@ export class HerosComponent implements OnInit {
     this.heros.push('');
   }
 
+  toggleText(data: boolean) {
+    this.showText = data;
+  }
 }

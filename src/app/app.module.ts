@@ -9,6 +9,7 @@ import { ContactComponent } from './components/contact/contact/contact.component
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { HerosComponent } from './components/heros/heros/heros.component';
 import { AutofocusDirective } from './directives/autofocus/autofocus.directive';
+import { CustomIfDirective } from './directives/custom-if/custom-if.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AutofocusDirective } from './directives/autofocus/autofocus.directive';
     HighlightDirective,
     AutofocusDirective,
     HerosComponent,
+    CustomIfDirective,
   ],
   imports: [
     BrowserModule,

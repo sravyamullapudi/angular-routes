@@ -21,3 +21,11 @@
     </tbody>
 </table>
 <button type="submit" (click)="onAdd()" autofocus highLight>Add</button>
+
+<div>
+    <h6 *customIf="showText">Bonjour</h6>
+</div>
+<div>
+    <button type="submit" (click)="toggleText(true)">show Text</button>
+    <button type="submit" (click)="toggleText(false)">Hide Text</button>
+</div>

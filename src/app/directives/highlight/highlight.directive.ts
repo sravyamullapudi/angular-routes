@@ -2,7 +2,10 @@ import { parseHostBindings } from '@angular/compiler';
 import { Directive, ElementRef, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[highLight]'
+  selector: 'tr[highLight]',
+  host: {
+    '(mouseover)': 'onMouseOver()'
+  }
 })
 export class HighlightDirective {
 
@@ -16,12 +19,12 @@ export class HighlightDirective {
   // @HostBinding('class') get class() { return 'highlight'};
   @HostBinding('class.highlight') get hasHighlight () { return true; } 
 
-  @HostListener('mouseover') onMouseOver() {
+  onMouseOver() {
     this.element.nativeElement.style.color = this.color;
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    // this.element.nativeElement.style.color = '';
-    this.color2 = ''
+    this.element.nativeElement.style.color = '';
+    // this.color2 = '';
   }
 }
