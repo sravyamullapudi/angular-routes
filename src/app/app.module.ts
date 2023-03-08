@@ -10,6 +10,10 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { HerosComponent } from './components/heros/heros/heros.component';
 import { AutofocusDirective } from './directives/autofocus/autofocus.directive';
 import { CustomIfDirective } from './directives/custom-if/custom-if.directive';
+import { PipeBuiltinsComponent } from './components/pipe-builtins/pipe-builtins.component';
+import { CssComponent } from './components/css/css.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,10 +25,14 @@ import { CustomIfDirective } from './directives/custom-if/custom-if.directive';
     AutofocusDirective,
     HerosComponent,
     CustomIfDirective,
+    PipeBuiltinsComponent,
+    CssComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

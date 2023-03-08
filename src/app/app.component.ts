@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-routes';
-
+  showMenu: boolean = false;
   headerOptions: any[] = [
     {
       name: 'Home',
@@ -24,6 +24,18 @@ export class AppComponent {
     {
       name: 'Heros',
       path: 'heros'
+    },
+    {
+      name: 'Pipes',
+      path: 'pipes'
+    },
+    {
+      name: 'CSS',
+      path: 'css'
     }
   ]
+
+  onMenu() {
+    this.showMenu = !this.showMenu;
+  }
 }

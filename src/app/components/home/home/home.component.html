@@ -1,1 +1,12 @@
-<p>home works!</p>
+<!-- <textarea id="textArea" name="textArea" rows="4" cols="50" [(ngModel)]="textContent"></textarea> -->
+<div id="textArea" contenteditable="true" [innerHTML]="textContent"></div>
+<br>
+<input type="submit" value="Submit" (click)="openKeyboard()">
+
+<div class="virtual-keyboard" *ngIf="showkeyboard">
+    <div class="keyboard-keys">
+        <ng-container *ngFor="let key of keyBoardInputs">
+            <input class="keyboard-key" type="button" [value]="key" (click)="onKeyPress(key)"/>
+        </ng-container>
+    </div>
+</div>

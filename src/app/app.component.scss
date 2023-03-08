@@ -9,3 +9,45 @@ ul {
         margin: 0px 20px;
     }
 }
+
+.toggle-btn {
+    height: 36px;
+    width: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;          
+    span {
+        height: 3px;
+        width: 100%;
+        background-color: #000000;
+        transition: .3s;
+        &:first-child {
+            width: 50%;
+            transform: translate(100%);
+        }
+        &:last-child {
+            width: 50%;
+            transform: translate(0);
+        }
+    }
+    &.open {
+        span {
+            &:first-child {
+                transform: translate(0);
+            }
+            &:last-child {
+                transform: translate(100%);
+            }
+        }
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

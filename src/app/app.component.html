@@ -1,4 +1,9 @@
 <header>
+  <button class="toggle-btn" [ngClass]="{'open': showMenu}" (click)="onMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
   <ul>
     <li [routerLink]="item.path" *ngFor="let item of headerOptions"> {{item.name}}</li>
   </ul>
